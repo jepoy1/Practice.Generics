@@ -1,0 +1,18 @@
+Bounded Types:
+
+-- When does this usually occur?
+  >When you want to create a generic class whereas you want to accept arrays,list of different type parameters(See SummaryLessons.txt).
+  For example you created an generic class that accepts array Object that accepts float, integer, double values and return its average.
+  
+-- What does Bounded Types do?
+  > (1)You need some way to tell the compiler that you intend to pass only numeric types to Generic Class. 
+  (2)Furthermore, you need some way to ensure that only numeric types are actually passed.
+  
+-- How to do Bounded Types?
+When specifying a type parameter, you can create an upper bound that declares the superclass from which all type arguments 
+must be derived. This is accomplished through the use of an extendsclause when specifying the type parameter.
+  ex. class Stats<T extends Number>
+  - This specifies that <T> can only be replaced by superclass or subclasses of superclass(Anything that inherits Number class, in
+  this example. UPPER BOUND - the superclass.
+  
+  - In this version, the type argument<T> must either be a class derived from Number class.
