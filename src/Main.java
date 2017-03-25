@@ -15,6 +15,13 @@ public class Main {
 		//Non-Generics should be cast implicitly in order to know what
 		//type of reference type it is.
 		
+		//Generic Class:
+		GenericClass<Integer, String> genericOne =
+		new GenericClass<Integer,String>(101, "Alladin Maderfaker");
+		//Generic class doesn't need to implicitly cast Objects into
+		//its primitive types. It is automatically unboxed.
+		int id = genericOne.GetObject1();
+		System.out.println(id);
 	}
 
 }
