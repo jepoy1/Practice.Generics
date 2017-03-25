@@ -1,0 +1,19 @@
+Generic Classes:
+ -- means parameterized types > Enables you to create classes, interfaces and methods in which the type of data
+upon which they operate is specified as a parameter.
+ -- Using Generics, it is possible to create a single class that can operate of different types of data.
+ex. declare two Objects using Generic class:
+	GenericClass<String, Integer> genericTwo =
+		new GenericClass<String, Integer>("Aladeen Maderfaker", 112);
+		int name2 = genericTwo.GetObject2();
+		System.out.println(name2);
+
+	GenericClass<Integer, String> genericOne =
+		new GenericClass<Integer,String>(101, "Alladin Maderfaker");
+		//Generic class doesn't need to implicitly cast Objects into
+		//its primitive types. It is automatically unboxed.
+		int id = genericOne.GetObject1();
+		System.out.println(id);
+
+Reflection: GenericClasses can have different types of arguments, Reference types of arguments to be precise for
+		versatility purposes.
